@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TmfEntityRef.schema.json",
+    "title": "TmfEntityRef",
+    "definitions": {
+      "TmfEntityRef": {
+        "$id": "#TmfEntityRef",
+        "description": "Tmf Entity Reference generic structure",
+        "type": "object",
+        "properties": {
+        },
+        "allOf": [
+            {
+                "$ref": "../../Core/EntityRef.schema.json#EntityRef"
+            },
+            {
+                "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+            },
+            {
+                "$ref": "../../Core/Reference.schema.json#Reference"
+            } 
+        ]
+      }
+    }
+  }

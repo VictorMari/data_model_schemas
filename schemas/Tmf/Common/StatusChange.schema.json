@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "StatusChange.schema.json",
+    "title": "StatusChange",
+    "definitions": {
+        "StatusChange": {
+            "$id": "#StatusChange",
+            "type": "object",
+            "description": "Holds the status, reasons and associated date the status changed, populated by the server",
+            "properties": {
+                "changeReason": {
+                    "type": "string",
+                    "description": "The reason why the status changed."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Core/SchemaContext.schema.json#/definitions/SchemaContext"
+                },
+                {
+                    "$ref": "../../Gc/Common/GcStatusChange.schema.json#/definitions/GcStatusChange"
+                }
+            ]
+        }
+    }
+}

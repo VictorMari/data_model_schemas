@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcTroubleTicket.schema.json",
+    "title": "GcTroubleTicket",
+    "definitions": {
+        "GcTroubleTicket": {
+            "$id": "GcTroubleTicket.schema.json",
+            "type": "object",
+            "description": "A trouble ticket is a record of an issue that is created, tracked, and managed by a trouble ticket management system",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description of the trouble or issue"
+                },
+                "status": {
+                    "$ref": "../Common/GcTroubleTicketStatusType.schema.json#GcTroubleTicketStatusType",
+                    "description": "The current status of the trouble ticket"
+                },
+                "severity": {
+                    "type": "string",
+                    "description": "The severity of the issue. Indicate the implication of the issue on the expected functionality e.g. of a system, application, service etc.. \nSeverity values can be for example : Critical, Major, Minor"
+                },
+                "ticketType": {
+                    "type": "string",
+                    "description": "represent a business type of the trouble ticket e.g. incident, complain, request"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Core/Entity.schema.json#Entity"
+                }
+            ],
+            "required": [
+                "description",
+                "status",
+                "severity",
+                "ticketType"
+            ]
+        }
+    }
+}

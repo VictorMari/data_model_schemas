@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "CategoryRef.schema.json",
+    "title": "CategoryRef",
+    "definitions": {
+        "CategoryRef": {
+            "$id": "#CategoryRef",
+            "description": "Reference to a category in the catalog.",
+            "type": "object",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "../../Core/EntityRef.schema.json#EntityRef"
+                },
+                {
+                    "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+                },
+                {
+                    "$ref": "../../Gc/Product/GcCategoryRef.schema.json#GcCategoryRef"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcMilestone.schema.json",
+    "title": "GcMilestone",
+    "definitions": {
+        "GcMilestone": {
+            "$id": "#GcMilestone",
+            "description": "An Entity Milestone represents an action or event marking a significant change or stage in processing of an entity.",
+            "type": "object",
+            "properties": {}
+        }
+    }
+}

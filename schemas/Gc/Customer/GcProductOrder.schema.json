@@ -28,7 +28,7 @@
                     "format": "date-time",
                     "description": "Date when the ProductOrder was completed"
                  },
-                "ProductOrderItem": {
+                "productOrderItem": {
                     "type": "array",
                     "description": "A ProductOrder items describe an action to be performed on a productOffering or a product.",
                     "items": {

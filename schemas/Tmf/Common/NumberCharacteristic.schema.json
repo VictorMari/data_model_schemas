@@ -18,9 +18,6 @@
             },
             "allOf": [
                 {
-                    "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
-                },
-                {
                     "$ref": "Characteristic.schema.json#Characteristic"
                 }
             ]

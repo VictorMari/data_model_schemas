@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcRelatedEntity.schema.json",
+    "title": "GcRelatedEntity",
+    "definitions": {
+        "GcRelatedEntity": {
+            "$id": "#GcRelatedEntity",
+            "description": "A reference to an entity, where the type of the entity is not known in advance.",
+            "type": "object",
+            "required": [
+                "role",
+                "@referredType"
+            ],
+            "properties": {
+                "role": {
+                    "type": "string",
+                    "description": "The role of an entity."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Core/Reference.schema.json#Reference"
+                }
+            ]
+        }
+    }
+}

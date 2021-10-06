@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcCategoryRef.schema.json",
+    "title": "GcCategoryRef",
+    "definitions": {
+      "GcCategoryRef": {
+        "$id": "#GcCategoryRef",
+        "type": "object",
+        "description": "Reference to a category in the catalog.",
+        "properties": {},
+        "allOf": [
+          {
+            "$ref": "../../Core/Reference.schema.json#Reference"
+          }
+        ]
+      }
+    }
+  }

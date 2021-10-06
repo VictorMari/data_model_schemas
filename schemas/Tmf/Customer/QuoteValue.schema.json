@@ -1,0 +1,138 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "QuoteValue.schema.json",
+    "title": "QuoteValue",
+    "definitions": {
+        "QuoteValue": {
+            "$id": "#QuoteValue",
+            "type": "object",
+            "description": "Quote can be used to negotiate service and product acquisition or modification between a customer and a service provider. Quote contain list of quote items, a reference to customer (partyRole), a list of productOffering and attached prices and conditions.",
+            "properties": {
+                "agreement": {
+                    "type": "array",
+                    "description": "A reference to an agreement defining the context of the quote",
+                    "items": {
+                        "$ref": "../EngagedParty/AgreementRef.schema.json#AgreementRef"
+                    }
+                },
+                "billingAccount": {
+                    "type": "array",
+                    "description": "A reference to a billing account to provide quote context information ",
+                    "items": {
+                        "$ref": "../Customer/BillingAccountRef.schema.json#BillingAccountRef"
+                    }
+                },
+                "category": {
+                    "type": "string",
+                    "description": "Used to categorize the quote from a business perspective that can be useful for the CRM system (e.g. \"enterprise\", \"residential\", ...)"
+                },
+                "contactMedium": {
+                    "type": "array",
+                    "description": "Information contact related to the quote requester",
+                    "items": {
+                        "$ref": "../Common/ContactMedium.schema.json#ContactMedium"
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of the quote"
+                },
+                "expectedFulfillmentStartDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "this is the date wished by the requester to have the requested quote item delivered"
+                },
+                "expectedQuoteCompletionDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "This is expected date - from quote supplier - to be able to send back  a response for this quote"
+                },
+                "externalId": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/ExternalIdentifier.schema.json#ExternalIdentifier"
+                    }
+                },
+                "instantSyncQuote": {
+                    "type": "boolean",
+                    "description": "An indicator which when the value is \"true\" means that requester expects to get quoting result immediately in the response. If the indicator is true then the response code of 200 indicates the operation is successful otherwise a task is created with a response 201. "
+                },
+                "note": {
+                    "type": "array",
+                    "description": "Free form text associated with the quote",
+                    "items": {
+                        "$ref": "../Common/Note.schema.json#Note"
+                    }
+                },
+                "effectiveQuoteCompletionDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date when the quote has been completed"
+                 },
+                 "creationDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date and time when the quote was created"
+                },
+                "authorization": {
+                    "type": "array",
+                    "description": "An authorization provided for the quote",
+                    "items": {
+                        "$ref": "../Customer/Authorization.schema.json#Authorization"
+                    }
+                },
+                "quoteTotalPrice": {
+                    "type": "array",
+                    "description": "Quote total price",
+                    "items": {
+                        "$ref": "../Customer/QuotePrice.schema.json#QuotePrice"
+                    }
+                },
+                "relatedParty": {
+                    "type": "array",
+                    "description": "A reference to a party playing a role in this quote (customer, seller, requester, etc.)",
+                    "items": {
+                        "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+                    }
+                },
+                "productOfferingQualification": {
+                    "type": "array",
+                    "description": "A reference to a previously done product offering qualification",
+                    "items": {
+                        "$ref": "../Product/ProductOfferingQualificationRef.schema.json#ProductOfferingQualificationRef"
+                    }
+                },
+                "requestedQuoteCompletionDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "This is requested date - from quote requester - to get a complete response for this quote"
+                },
+                "state": {
+                    "$ref": "../Customer/QuoteStateType.schema.json#QuoteStateType",
+                    "description": "State of the quote : described in the state-machine diagram"
+                },
+                "validFor": {
+                    "$ref": "../../Core/TimePeriod.schema.json#TimePeriod",
+                    "description": "Quote validity period"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "Quote version - if the customer rejected the quote but  negotiations still open a new version of the quote is managed"
+                },
+                "quoteItem": {
+                    "type": "array",
+                    "description": "A quote items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
+                    "items": {
+                        "$ref": "QuoteItem.schema.json#QuoteItem"
+                    },
+                    "minItems": 1
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Core/Entity.schema.json#Entity"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TerminationError.schema.json",
+    "title": "TerminationError",
+    "definitions": {
+        "TerminationError": {
+            "$id": "#TerminationError",
+            "description": "Extra information about a given entity",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the termination error"
+                  },
+                  "value": {
+                    "type": "string",
+                    "description": "Text to describe the termination error - for example: Unable to proceed to qualification because incomplete information provided"
+                  }
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Gc/Common/GcTerminationError.schema.json#GcTerminationError"
+                },
+                {
+                    "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+                }
+            ]
+        }
+    }
+}

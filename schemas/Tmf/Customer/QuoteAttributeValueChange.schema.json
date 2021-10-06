@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "QuoteAttributeValueChange.schema.json",
+    "title": "QuoteAttributeValueChange",
+    "definitions": {
+      "QuoteAttributeValueChange": {
+        "$id": "#QuoteAttributeValueChange",
+        "description": "QuoteAttributeValueChange generic structure",
+        "required": ["quote"],
+        "type": "object",
+        "properties": {
+          "quote": {
+            "$ref": "../Customer/QuoteValue.schema.json#QuoteValue"
+          }
+        }
+      }
+    }
+  }

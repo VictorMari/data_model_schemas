@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ProductOrderJeopardyAlert.schema.json",
+  "title": "ProductOrderJeopardyAlert",
+  "definitions": {
+    "ProductOrderJeopardyAlert": {
+      "$id": "#ProductOrderJeopardyAlert",
+      "description": "A ProductOrderJeopardyAlert represents a predicted exception during a product order processing that would brings risk to complete successfully the order.",
+      "type": "object",
+      "properties": {
+        "productOrderItem": {
+          "type": "array",
+          "description": "A list of order item references corresponded to this alert",
+          "items": {
+             "$ref": "../Customer/ProductOrderItemRef.schema.json#/definitions/ProductOrderItemRef"
+          }
+        } 
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/JeopardyAlert.schema.json#/definitions/JeopardyAlert"
+        }
+      ]
+    }
+  }
+}

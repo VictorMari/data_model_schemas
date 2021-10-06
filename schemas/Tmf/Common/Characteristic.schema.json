@@ -11,6 +11,10 @@
                 "id": {
                     "type": "string",
                     "description": "Unique identifier of the characteristic"
+                },
+                "valueType": {
+                    "type": "string",
+                    "description": "Data type of the value of the characteristic"
                 }
             },
             "allOf": [

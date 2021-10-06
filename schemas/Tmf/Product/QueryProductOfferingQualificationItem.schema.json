@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "QueryProductOfferingQualificationItem.schema.json",
+    "title": "QueryProductOfferingQualificationItem",
+    "definitions": {
+      "QueryProductOfferingQualificationItem": {
+        "$id": "#QueryProductOfferingQualificationItem",
+        "type": "object",
+        "properties": {
+          "qualificationItemRelationship": {
+            "type": "array",
+            "items": {
+              "$ref": "../Product/ProductOfferingQualificationItemRelationship.schema.json#ProductOfferingQualificationItemRelationship"
+            }
+          },
+          "product": {
+            "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue"
+          },
+          "productOffering": {
+            "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
+          },
+          "promotion": {
+            "$ref": "../Product/PromotionRef.schema.json#PromotionRef"
+          }
+        },
+        "allOf": [
+            {
+                "$ref": "../../Gc/Product/GcQueryProductOfferingQualificationItem.schema.json#GcQueryProductOfferingQualificationItem"
+            },
+            {
+                "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+            }
+        ]
+      }
+    }
+  }
+  

@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "QuoteCreate.schema.json",
+    "title": "QuoteCreate",
+    "definitions": {
+      "QuoteCreate": {
+        "$id": "#QuoteCreate",
+        "description": "QuoteCreate",
+        "required": ["quote"],
+        "type": "object",
+        "properties": {
+          "quote": {
+            "$ref": "../Customer/Quote.schema.json#Quote"
+        }
+        }
+      }
+    }
+  }

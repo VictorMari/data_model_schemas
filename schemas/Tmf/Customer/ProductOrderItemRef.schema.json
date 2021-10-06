@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductOrderItemRef.schema.json",
+    "title": "ProductOrderItemRef",
+    "definitions": {
+        "ProductOrderItemRef": {
+            "$id": "#ProductOrderItemRef",
+            "type": "object",
+            "description": "A reference to ProductOrder item that has been executed previously.",
+            "properties": {
+                "ProductOrderHref": {
+                    "type": "string",
+                    "description": "Reference of the related ProductOrder."
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Gc/Customer/GcProductOrderItemRef.schema.json#GcProductOrderItemRef"
+                },
+                {
+                    "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+                }
+            ]
+        }
+    }
+}

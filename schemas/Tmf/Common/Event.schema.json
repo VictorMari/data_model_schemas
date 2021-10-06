@@ -8,19 +8,6 @@
             "description": "event with common attributes.",
             "type": "object",
             "properties": {
-                "eventId": {
-                    "type": "string",
-                    "description": "The identifier of the notification."
-                },
-                "eventTime": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Time of the event occurrence."
-                },
-                "eventType": {
-                    "type": "string",
-                    "description": "The type of the notification."
-                },
                 "correlationId": {
                     "type": "string",
                     "description": "The correlation id for this event."
@@ -47,11 +34,11 @@
                     "description": "The time the event occurred."
                 },
                 "source": {
-                    "$ref": "../Common/EntityRef.schema.json#EntityRef",
+                    "$ref": "../Common/TmfEntityRef.schema.json#TmfEntityRef",
                     "description": "Source Entity described by EntityRef"
                 },
                 "reportingSystem": {
-                    "$ref": "../Common/EntityRef.schema.json#EntityRef",
+                    "$ref": "../Common/TmfEntityRef.schema.json#TmfEntityRef",
                     "description": "Reporting System described by EntityRef"
                 },
                 "relatedParty": {
@@ -65,15 +52,11 @@
                     "items": {
                         "$ref": "../Common/Characteristic.schema.json#Characteristic"
                     }
-                },
-                "event": {
-                    "description": "The event linked to the involved resource object",
-                    "$ref": "../Common/Any.schema.json#Any"
                 }
             },
             "allOf": [
                 {
-                    "$ref": "../Common/Entity.schema.json#Entity"
+                    "$ref": "../../Gc/Common/GcEvent.schema.json#GcEvent"
                 }
             ]
         }

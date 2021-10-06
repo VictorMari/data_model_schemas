@@ -12,6 +12,10 @@
           "type": "integer",
           "description": "Quantity ordered"
         },
+        "action": {
+          "$ref": "../Common/ItemActionType.schema.json#ItemActionType",
+          "description": "Action to be performed on this product order item (add, modify, delete, noChange)"
+        },        
         "appointment": {
           "$ref": "../Customer/AppointmentRef.schema.json#AppointmentRef"
         },
@@ -34,6 +38,12 @@
           "type": "array",
           "items": {
             "$ref": "../Customer/OrderPrice.schema.json#OrderPrice"
+          }
+        },
+        "note": {
+          "type": "array",
+          "items": {
+            "$ref": "../Common/Note.schema.json#Note"
           }
         },
         "payment": {
@@ -66,6 +76,10 @@
             "$ref": "../Customer/OrderItemRelationship.schema.json#OrderItemRelationship"
           }
         },
+        "state": {
+            "$ref": "../Customer/ProductOrderItemStateType.schema.json#ProductOrderItemStateType",
+            "description": "State of the ProductOrder item : described in the state machine diagram"
+          },
         "qualification": {
           "type": "array",
           "items": {

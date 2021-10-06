@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcTerminationError.schema.json",
+    "title": "GcTerminationError",
+    "definitions": {
+      "GcTerminationError": {
+        "$id": "#GcTerminationError",
+        "description": "This indicates an error that caused a qualificationItem to be terminated.",
+        "type": "object",
+        "properties": {
+        }
+      }
+    }
+  }

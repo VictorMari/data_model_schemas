@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcAlternateProductOfferingProposal.schema.json",
+    "title": "GcAlternateProductOfferingProposal",
+    "definitions": {
+        "GcAlternateProductOfferingProposal": {
+            "$id": "#GcAlternateProductOfferingProposal",
+            "description": "Alternate product Offering proposal is used when the requested product offering is not available with characteristic and date asked for. An alternate proposal could be a distinct product offering or product Spec close to requested one or same as requested but with a different activation date.",
+            "required": [
+                "id",
+                "alternateProductOffering"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the AlternateProductOfferingProposal within its containing entity"
+                },
+                "alternateProductOffering": {
+                    "$ref": "../Product/GcProductOfferingRef.schema.json#GcProductOfferingRef",
+                    "description": "Alternate product offering proposal"
+                  }
+            }
+        }
+    }
+}

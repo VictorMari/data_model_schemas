@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcProductOfferingQualificationItemRelationship.schema",
+    "title": "GcProductOfferingQualificationItemRelationship",
+    "definitions": {
+      "GcProductOfferingQualificationItemRelationship": {
+        "$id": "#GcProductOfferingQualificationItemRelationship",
+        "description": "Used to describe relationship between POQ item. These relationship could have an impact on eligibility and conditions",
+        "type": "object",
+        "required": ["id", "relationshipType"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the related POQ item (must be in the same POQ)"
+          },
+          "relationshipType": {
+            "type": "string",
+            "description": "Relationship type as relies on, bundles, etc..."
+          }
+        }
+      }
+    }
+  }
+  

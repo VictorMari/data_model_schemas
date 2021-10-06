@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcOrderRelationship.schema.json",
+    "title": "GcOrderRelationship",
+    "definitions": {
+        "GcOrderRelationship": {
+            "$id": "#GcOrderRelationship",
+            "description": "Used to describe relationship between order.",
+            "type": "object",
+            "required": [
+                "id",
+                "relationshipType"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Id of the related order"
+                },
+                "relationshipType": {
+                    "type": "string",
+                    "description": "Relationship type as correlates, triggers, etc..."
+                }
+            }
+        }
+    }
+}

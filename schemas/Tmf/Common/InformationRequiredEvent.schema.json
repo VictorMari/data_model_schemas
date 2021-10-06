@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "InformationRequiredEvent.schema.json",
+    "title": "InformationRequiredEvent",
+    "definitions": {
+      "InformationRequiredEvent": {
+        "$id": "#InformationRequiredEvent",
+        "description": "InformationRequiredEvent generic structure",
+        "required": ["id", "href", "informationRequiredPath", "@type"],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "unique identifier of the resource"
+          },
+          "href": {
+            "type": "string",
+            "description": "hyperlink reference to the resource"
+          },
+          "@type": {
+            "type": "string",
+            "description": "When sub-classing, this defines the sub-class Extensible name"
+          },
+          "informationRequiredPath": {
+            "type": "array",
+            "items": {
+              "$ref": "Path.schema.json#Path"
+            },
+            "minItems": 1
+          }
+        }
+      }
+    }
+  }
+  

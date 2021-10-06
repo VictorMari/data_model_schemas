@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "QuoteItemRef.schema.json",
+    "title": "QuoteItemRef",
+    "definitions": {
+        "QuoteItemRef": {
+            "$id": "#QuoteItemRef",
+            "type": "object",
+            "description": "A reference to Quote item that has been executed previously.",
+            "properties": {
+                "quoteHref": {
+                    "type": "string",
+                    "description": "Reference of the related quote."
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Gc/Customer/GcQuoteItemRef.schema.json#GcQuoteItemRef"
+                },
+                {
+                    "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+                }
+            ]
+        }
+    }
+}

@@ -15,8 +15,8 @@
             "description": "A quote items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
             "properties": {
                 "action": {
-                    "type": "string",
-                    "description": "Action to be performed on this quote item (add, modify, remove, etc.)"
+                    "$ref": "../Common/GcItemActionType.schema.json#GcItemActionType",
+                    "description": "Action to be performed on this quote item (add, modify, delete)"
                 },
                 "id": {
                     "type": "string",

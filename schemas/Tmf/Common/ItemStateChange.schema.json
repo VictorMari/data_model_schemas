@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ItemStateChange.schema.json",
+    "title": "ItemStateChange",
+    "definitions": {
+      "ItemStateChange": {
+        "$id": "#ItemStateChange",
+        "description": "ItemStateChange generic structure",
+        "required": ["itemId", "state"],
+        "type": "object",
+        "properties": {
+          "itemId": {
+            "type": "string",
+            "description": "identifier of the item"
+          },
+
+          "state": {
+            "type": "string",
+            "description": "state of the item"
+          }
+        }
+      }
+    }
+  }

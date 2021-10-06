@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "SubmitProductOrder.schema.json",
+  "title": "SubmitProductOrder",
+  "definitions": {
+    "SubmitProductOrder": {
+      "$id": "#SubmitProductOrder",
+      "description": "Request for submission of a draft product order",
+      "type": "object",
+      "properties": {
+        "productOrder": {
+          "$ref": "../Customer/ProductOrderRef.schema.json#ProductOrderRef"
+        },
+        "creationDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time when the SubmitProductOrder was created"
+        },
+        "state": {
+          "description": "Tracks the lifecycle status of the cancellation request, such as Acknowledged, Rejected, InProgress, Pending and so on.",
+          "$ref": "../Common/TaskStateType.schema.json#TaskStateType"
+        },
+        "effectiveSubmissionDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date when the order is submitted."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../../Gc/Customer/GcSubmitProductOrder.schema.json#GcSubmitProductOrder"
+        }
+      ]
+    }
+  }
+}

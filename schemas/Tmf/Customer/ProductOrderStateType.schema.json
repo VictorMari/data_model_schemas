@@ -18,7 +18,9 @@
           "failed",
           "partial",
           "assessingCancellation",
-          "pendingCancellation"
+          "pendingCancellation",
+          "draft",
+          "inProgress.accepted"
         ]
       }
     }

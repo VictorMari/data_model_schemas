@@ -9,7 +9,7 @@
             "description": "It's a Order item that has been executed previously.",
             "properties": {
                 "orderItemAction": {
-                    "type": "string",
+                    "$ref": "../Common/ItemActionType.schema.json#ItemActionType",
                     "description": "Action of the order item for this product."
                 },
                 "orderHref": {

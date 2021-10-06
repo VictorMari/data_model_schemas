@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcJeopardyAlert.schema.json",
+    "title": "GcJeopardyAlert",
+    "definitions": {
+        "GcJeopardyAlert": {
+            "$id": "#GcJeopardyAlert",
+            "description": "A Order Jeopardy Alert represents a predicted exception during an order processing that would brings risk to complete successfully the order.",
+            "type": "object",
+            "properties": {}
+        }
+    }
+}

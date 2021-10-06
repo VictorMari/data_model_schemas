@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "OrderItemRelationship.schema.json",
+    "title": "OrderItemRelationship",
+    "definitions": {
+        "OrderItemRelationship": {
+            "$id": "#OrderItemRelationship",
+            "description": "Used to describe relationship between Order item. These relationship could have an impact on pricing and conditions",
+            "type": "object",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "../../Gc/Customer/GcOrderItemRelationship.schema.json#GcOrderItemRelationship"
+                },
+                {
+                    "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+                }
+            ]
+        }
+    }
+}

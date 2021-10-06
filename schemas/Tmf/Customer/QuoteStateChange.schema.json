@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "QuoteStateChange.schema.json",
+    "title": "QuoteStateChange",
+    "definitions": {
+      "QuoteStateChange": {
+        "$id": "#QuoteStateChange",
+        "description": "QuoteStateChange generic structure",
+        "required": ["quote"],
+        "type": "object",
+        "properties": {
+          "quote": {
+            "$ref": "../Common/StateChangeEvent.schema.json#StateChangeEvent"
+          }
+        }
+      }
+    }
+  }

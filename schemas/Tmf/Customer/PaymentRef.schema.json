@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "PaymentRef.schema.json",
+    "title": "PaymentRef",
+    "definitions": {
+        "PaymentRef": {
+            "$id": "#PaymentRef",
+            "type": "object",
+            "description": "If an immediate payment has been done at the product order submission, the payment information are captured and stored (as a reference) in the order.",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "../../Gc/Customer/GcPaymentRef.schema.json#/definitions/GcPaymentRef"
+                },
+                {
+                    "$ref": "../../Core/EntityRef.schema.json#/definitions/EntityRef"
+                },                
+                {
+                    "$ref": "../../Core/SchemaContext.schema.json#/definitions/SchemaContext"
+                }
+            ]
+        }
+    }
+}

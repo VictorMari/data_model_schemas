@@ -21,19 +21,7 @@
           "$ref": "GeographicAddressValue.schema.json#/GeographicAddressValue"
         },
         {
-          "$ref": "GeoJsonLineStringValue.schema.json#/GeoJsonLineString"
-        },
-        {
-          "$ref": "GeoJsonMultiLineStringValue.schema.json#/GeoJsonMultiLineString"
-        },
-        {
-          "$ref": "GeoJsonMultiPointValue.schema.json#/GeoJsonMultiPoint"
-        },
-        {
-          "$ref": "GeoJsonPointValue.schema.json#/GeoJsonPoint"
-        },
-        {
-          "$ref": "GeoJsonPolygonValue.schema.json#/GeoJsonPolygon"
+          "$ref": "GeographicLocationValue.schema.json#/GeographicLocationValue"
         }
       ]
     }

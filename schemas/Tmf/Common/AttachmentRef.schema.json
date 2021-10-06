@@ -14,8 +14,7 @@
                 },
                 "url": {
                     "description": "Link to the attachment media/content",
-                    "type": "string",
-                    "format": "uri"
+                    "type": "string"
                 }
             },
             "allOf": [

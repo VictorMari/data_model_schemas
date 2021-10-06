@@ -22,7 +22,6 @@
                 },
                 "url": {
                     "type": "string",
-                    "format": "uri",
                     "description": "Uniform Resource Locator, is a web page address (a subset of URI)",
                     "examples": [
                         "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f"

@@ -8,6 +8,10 @@
             "type": "object",
             "description": "A quote items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
             "properties": {
+                "action": {
+                    "$ref": "../Common/ItemActionType.schema.json#ItemActionType",
+                    "description": "Action to be performed on this quote item (add, modify, delete, noChange)"
+                },
                 "appointment": {
                     "type": "array",
                     "description": "A reference to appointment(s) associated with this quote item",

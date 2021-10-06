@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcProductOrderRef.schema.json",
+    "title": "GcProductOrderRef",
+    "definitions": {
+        "GcProductOrderRef": {
+            "$id": "#GcProductOrderRef",
+            "description": "A reference to an existing Product Order.",
+            "type": "object",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "../../Core/Reference.schema.json#Reference"
+                }
+            ]
+        }
+    }
+}

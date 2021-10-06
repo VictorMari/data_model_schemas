@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "GeographicSubAddressUnit.schema.json",
+  "title": "GeographicSubAddressUnit",
+  "definitions": {
+    "GeographicSubAddressUnit": {
+      "$id": "#GeographicSubAddressUnit",
+      "description": "Representation of a SubUnit. It is used for describing subunit within a subAddress e.g. BERTH, FLAT, PIER, SUITE, SHOP, TOWER, UNIT, WHARF.",
+      "type": "object",
+      "properties": {},
+       "allOf": [
+                {
+                    "$ref": "../../Gc/Common/GcGeographicSubAddressUnit.schema.json#GcGeographicSubAddressUnit"
+                },
+                {
+                    "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+                }
+            ]
+  }
+}
+}

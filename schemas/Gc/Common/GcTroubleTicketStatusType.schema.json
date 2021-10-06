@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcTroubleTicketStatusType.schema.json",
+    "title": "GcTroubleTicketStatusType",
+    "definitions": {
+        "GcTroubleTicketStatusType": {
+            "$id": "#GcTroubleTicketStatusType",
+            "type": "string",
+            "description": "Possible values for the status of the trouble ticket",
+            "enum": [
+                "acknowledged",
+                "rejected",
+                "inProgress",
+                "cancelled",
+                "closed",
+                "resolved"
+            ],
+            "properties": {}
+        }
+    }
+}

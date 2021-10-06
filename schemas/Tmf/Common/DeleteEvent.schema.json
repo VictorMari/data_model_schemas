@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "DeleteEvent.schema.json",
+    "title": "DeleteEvent",
+    "definitions": {
+      "DeleteEvent": {
+        "$id": "#DeleteEvent",
+        "description": "DeleteEvent generic structure",
+        "required": ["id"],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identifier of the resource"
+          },
+          "href": {
+            "type": "string",
+            "description": "hyperlink to the resource"
+          }
+        }
+      }
+    }
+  }
+  

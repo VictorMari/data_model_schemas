@@ -6,11 +6,30 @@
         "GcEvent": {
             "$id": "#GcEvent",
             "description": "event with common attributes.",
+            "required" : ["eventId", "eventTime", "eventType", "event"],
             "type": "object",
-            "properties": {},
+            "properties": {
+                "eventId": {
+                    "type": "string",
+                    "description": "The identifier of the notification."
+                },
+                "eventTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Time of the event occurrence."
+                },
+                "eventType": {
+                    "type": "string",
+                    "description": "The type of the notification."
+                },
+                "event": {
+                    "description": "The event linked to the involved resource object",
+                    "type": "object"
+                }
+            },
             "allOf": [
                 {
-                    "$ref": "../../Core/Entity.schema.json"
+                    "$ref": "../../Core/Entity.schema.json#Entity"
                 }
             ]
         }

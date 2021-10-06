@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductOfferingQualificationItemRelationship.schema.json",
+    "title": "ProductOfferingQualificationItemRelationship",
+    "definitions": {
+      "ProductOfferingQualificationItemRelationship": {
+        "$id": "#ProductOfferingQualificationItemRelationship",
+        "description": "Structure used to describe relationship between productOfferingQualification item from the same ProductOfferingQualification.",
+        "type": "object",
+        "properties": {
+        },
+        "allOf": [
+          {
+            "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+          },
+          {
+            "$ref": "../../Gc/Product/GcProductOfferingQualificationItemRelationship.schema.json#GcProductOfferingQualificationItemRelationship"
+        }
+        ]
+      }
+    }
+  }

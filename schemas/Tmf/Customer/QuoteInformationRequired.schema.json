@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "QuoteInformationRequired.schema.json",
+    "title": "QuoteInformationRequired",
+    "definitions": {
+      "QuoteInformationRequired": {
+        "$id": "#QuoteInformationRequired",
+        "description": "QuoteInformationRequired generic structure",
+        "required": ["quote"],
+        "type": "object",
+        "properties": {
+          "quote": {
+            "$ref": "../Common/InformationRequiredEvent.schema.json#InformationRequiredEvent"
+          }
+        }
+      }
+    }
+  }

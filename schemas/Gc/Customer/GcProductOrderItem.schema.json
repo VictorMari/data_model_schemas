@@ -14,8 +14,8 @@
         "description": "A ProductOrder items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
         "properties": {
           "action": {
-            "type": "string",
-            "description": "The action to be carried out on the Product. Can be: add, modify, delete, noChange"
+            "$ref": "../Common/GcItemActionType.schema.json#GcItemActionType",
+            "description": "The action to be carried out on the Product. Can be: add, modify, delete"
           },
           "id": {
             "type": "string",
@@ -25,12 +25,7 @@
             "$ref": "../Customer/GcProductOrderItemStateType.schema.json#GcProductOrderItemStateType",
             "description": "State of the ProductOrder item : described in the state machine diagram"
           }
-        },
-        "allOf": [
-          {
-            "$ref": "../../Core/Entity.schema.json#Entity"
-          }
-        ]
+        }
       }
     }
   }

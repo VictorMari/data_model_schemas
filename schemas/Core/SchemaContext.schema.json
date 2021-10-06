@@ -10,7 +10,6 @@
       "properties": {
         "@schemaLocation": {
           "type": "string",
-          "format": "uri",
           "description": "A URI to a JSON-Schema file that defines additional attributes and relationships"
         },
         "@baseType": {

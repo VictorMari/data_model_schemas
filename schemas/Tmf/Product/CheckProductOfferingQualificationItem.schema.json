@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "CheckProductOfferingQualificationItem.schema.json",
+    "title": "CheckProductOfferingQualificationItem",
+    "definitions": {
+      "CheckProductOfferingQualificationItem": {
+        "$id": "#CheckProductOfferingQualificationItem",
+        "type": "object",
+        "properties": {
+          "expectedActivationDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date when the requester look for productOfferingQualification activation"
+          },
+          "eligibilityUnavailabilityReason": {
+            "type": "array",
+            "items": {
+              "$ref": "../Product/EligibilityUnavailabilityReason.schema.json#EligibilityUnavailabilityReason"
+            }
+          },
+          "qualificationItemRelationship": {
+            "type": "array",
+            "items": {
+              "$ref": "../Product/ProductOfferingQualificationItemRelationship.schema.json#ProductOfferingQualificationItemRelationship"
+            }
+          },
+          "CheckProductOfferingQualificationItem": {
+            "type": "array",
+            "description": "A structure to embed check qualification item within check qualification item",
+            "items": {
+              "$ref": "../Product/CheckProductOfferingQualificationItem.schema.json#CheckProductOfferingQualificationItem"
+                }
+          },
+          "note": {
+            "type": "array",
+            "items": {
+              "$ref": "../Common/Note.schema.json#Note"
+            }
+          },
+          "product": {
+            "$ref": "../Product/ProductRefOrValue.schema.json#ProductRefOrValue"
+          },
+          "terminationError": {
+            "type": "array",
+            "items": {
+              "$ref": "../Common/TerminationError.schema.json#TerminationError"
+            }
+          },
+          "productOffering": {
+            "$ref": "../Product/ProductOfferingRef.schema.json#ProductOfferingRef"
+          },
+          "promotion": {
+            "$ref": "../Product/PromotionRef.schema.json#PromotionRef"
+          },
+          "alternateProductOfferingProposal": {
+            "type": "array",
+            "items": {
+              "$ref": "../Product/AlternateProductOfferingProposal.schema.json#AlternateProductOfferingProposal"
+            }
+          }
+        },
+        "allOf": [
+            {
+                "$ref": "../../Gc/Product/GcCheckProductOfferingQualificationItem.schema.json#GcCheckProductOfferingQualificationItem"
+            },
+            {
+                "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+            }
+        ]
+      }
+    }
+  }
+  

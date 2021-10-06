@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcProductOrderItemRef.schema.json",
+    "title": "GcProductOrderItemRef",
+    "definitions": {
+        "GcProductOrderItemRef": {
+            "$id": "#GcProductOrderItemRef",
+            "type": "object",
+            "description": "A reference to Product Order item that has been executed previously.",
+            "required": [
+                "productOrderItemId",
+                "productOrderId"
+            ],
+            "properties": {
+                "productOrderId": {
+                    "type": "string",
+                    "description": "Unique identifier of a refered product order."
+                },
+                "productOrderItemId": {
+                    "type": "string",
+                    "description": "Identifier of a product order item. "
+                }
+            }
+        }
+    }
+}

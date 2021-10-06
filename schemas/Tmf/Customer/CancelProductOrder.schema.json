@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "CancelProductOrder.schema.json",
+  "title": "CancelProductOrder",
+  "definitions": {
+    "CancelProductOrder": {
+      "$id": "#CancelProductOrder",
+      "description": "Request for cancellation an existing product order",
+      "type": "object",
+      "properties": {
+        "productOrder": {
+          "$ref": "../Customer/ProductOrderRef.schema.json#ProductOrderRef"
+        },
+        "creationDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time when the CancelProductOrder was created"
+        },
+        "requestedCancellationDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date when the submitter wants the order to be cancelled"
+        },
+        "cancellationReason": {
+          "type": "string",
+          "description": "Reason why the order is cancelled."
+        },
+        "state": {
+          "description": "Tracks the lifecycle status of the cancellation request, such as Acknowledged, Rejected, InProgress, Pending and so on.",
+          "$ref": "../Common/TaskStateType.schema.json#TaskStateType"
+        },
+        "effectiveCancellationDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date when the order is cancelled."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../../Gc/Customer/GcCancelProductOrder.schema.json#GcCancelProductOrder"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductOrderRef.schema.json",
+    "title": "ProductOrderRef",
+    "definitions": {
+        "ProductOrderRef": {
+            "$id": "#ProductOrderRef",
+            "description": "A reference to an existing Product Order.",
+            "type": "object",
+            "properties": {
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Gc/Customer/GcProductOrderRef.schema.json#GcProductOrderRef"
+                },
+                {
+                    "$ref": "../../Core/EntityRef.schema.json#EntityRef"
+                },
+                {
+                    "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+                }
+            ]
+        }
+    }
+}

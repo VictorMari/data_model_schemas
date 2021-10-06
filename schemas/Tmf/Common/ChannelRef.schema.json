@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ChannelRef.schema.json",
+    "title": "ChannelRef",
+    "definitions": {
+        "ChannelRef": {
+            "$id": "#ChannelRef",
+            "description": "Reference to a Channel.",
+            "type": "object",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "../../Gc/Common/GcChannelRef.schema.json#GcChannelRef"
+                },
+                {
+                    "$ref": "../../Core/SchemaContext.schema.json#SchemaContext"
+                }
+            ]
+        }
+    }
+}
