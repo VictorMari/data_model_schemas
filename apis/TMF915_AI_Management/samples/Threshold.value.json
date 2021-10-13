@@ -1,9 +1,0 @@
-{
-    "description": "This  threshold ...",
-    "id": 6,
-    "name": "a string ...",
-    "thresholdRule": [
-        {}
-    ],
-    "thresholdType": {}
-}

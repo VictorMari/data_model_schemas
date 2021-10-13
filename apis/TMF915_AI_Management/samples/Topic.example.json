@@ -1,8 +1,0 @@
-{
-    "href": "https:/host:port/tmf-api/topic/v1/topic/AlarmTopic ",
-    "name": "AlarmManagement-Montreal", 
-    "headerQuery" :   "eventType=AlarmCreateNotification&domain=Montreal",
-    "contentQuery": "event.alarm.perceivedSeverity=CRITICAL",
-    "id": "AlarmTopic"
-  
-}
