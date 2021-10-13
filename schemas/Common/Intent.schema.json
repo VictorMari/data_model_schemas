@@ -15,11 +15,84 @@
         "name": {
           "type": "string",
           "description": "The name of the intent."
+        },
+        "validFor": {
+          "$ref": "../Common/TimePeriod.schema.json#TimePeriod", 
+          "description": "The period for which this intent is valid"
+        },
+        "isBundle": {
+          "type": "boolean",
+          "description": "isBundle determines whether an intent represents a single intent (false), or a bundle of intents(true)."
+        },
+        "creationDate": {
+          "type": "string", 
+          "format": "date-time", 
+          "description": "Date and time of the creation of this REST resource"
+        },
+        "lastUpdate": {
+          "type": "string", 
+          "format": "date-time", 
+          "description": "Date and time of the last update of this REST resource"
+        }, 
+        "lifecycleStatus": {
+          "type": "string", 
+          "description": "Used to indicate the current lifecycle status of this intent"
+        },
+        "statusChangeDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "A date time( DateTime). The date that the entity status changed to the current one"
+        },
+        "context": {
+          "type": "string",
+          "description": "A string used to give a context to the intent"
+        },
+        "version": {
+          "type": "string",
+          "description": "A field that identifies the specific version of an instance of an intent."
+        },
+        "intentSpecification": {
+          "$ref": "../Common/EntityRef.schema.json#/definitions/EntityRef",
+          "description": "A reference to the associated Intent specification."
+        },
+        "intentRelationship": {
+          "type": "array",
+          "items": {
+                  "$ref": "../Common/EntityRelationship.schema.json#/definitions/EntityRelationship"
+          },
+          "description": "A list of intents related to this intent"
+        },
+        "characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
+          }
+        },
+        "relatedParty": {
+          "type": "array",
+          "items": {
+            "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+          }
+        },
+        "attachment": {
+          "type": "array",
+          "items": {
+            "$ref": "../Common/AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
+          },
+          "description": "Attachments that may be of relevance to this intent, such as picture, document, media"
+        },
+        "relatedExpectation": {
+          "type": "array",
+          "items": {
+            "$ref": "../Common/RelatedExpectationRefOrValue.schema.json#/definitions/RelatedExpectationRefOrValue"
+          },
+          "minItems": 1,
+          "description": "related expectations that may be of relevance to this intent"
         }
       },
       "allOf": [
         {
-          "$ref": "../Common/Entity.schema.json#Entity"
+          "$ref": "../Common/Entity.schema.json#/definitions/Entity"
         }
       ]
     }

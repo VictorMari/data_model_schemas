@@ -5,7 +5,7 @@
   "definitions": {
     "ChangeRequest": {
       "type": "object",
-      "description": "Change Request is a type of request which can be used for the management and control of Change Management \nprocess between a customer and a service provider or between a service provider and a partner and vice versa.",
+      "description": "Change Request is a type of request which can be used for the management and control of Change Management process \n -within a service provider organisation or \n -between a customer and a service provider or \n -between a service provider and a partner and vice versa.",
       "properties": {
         "href": {
           "type": "string",
@@ -24,7 +24,6 @@
           "$ref": "Uri.schema.json#/definitions/Uri",
           "description": "A URI to a JSON-Schema file that defines additional attributes and relationships"
         },
-        
         "@type": {
           "type": "string",
           "description": "When sub-classing, this defines the sub-class Extensible name"
@@ -87,7 +86,7 @@
         "impactEntity": {
           "type": "array",
           "items": {
-            "$ref": "RelatedEntity.schema.json#/definitions/RelatedEntity"
+            "$ref": "ImpactEntity.schema.json#/definitions/ImpactEntity"
           }
         },
         "lastUpdateDate": {
@@ -186,7 +185,9 @@
           "type": "array",
           "items": {
             "$ref": "RelatedEntity.schema.json#/definitions/RelatedEntity"
-          }
+          },
+          "minItems": 1 
+          
         },
         "troubleTicket": {
           "type": "array",

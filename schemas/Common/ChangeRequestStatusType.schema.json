@@ -10,15 +10,16 @@
             "enum": [
                  "acknowledged",
                  "requestForAuthorization",
-                 "scheduledForApproval",
-                 "pendingForImplementation",
+                 "waitForApproval",
+                 "approved",
+                 "scheduled",
                  "postImplementationReview",
                  "fallbackExecution",
                  "cancelled",
                  "rejected",
-                 "implementationInProgress",
+                 "inProgress",
                  "failed",
-                 "closed"
+                 "completed"
                  
             ]
         }

@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "IntentSpecification.schema.json",
+    "title": "IntentSpecification",
+    "definitions": {
+        "IntentSpecification": {
+            "$id": "#IntentSpecification",
+            "type": "object",
+            "description": "IntentSpecification is a class that offers characteristics to describe a type of intent.\nFunctionally, it acts as a template by which intents may be instantiated. By sharing the same specification, these services would therefore share the same set of characteristics.",
+            "properties": {
+                "expectationSpecification": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/ExpectationSpecification.schema.json#/definitions/ExpectationSpecification"
+                    },
+                    "description": "A list of expectation specifications"
+                },
+                "intentSpecRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/IntentSpecificationRelationship.schema.json#/definitions/IntentSpecificationRelationship"
+                    },
+                    "description": "A list of intent specifications related to this specification, e.g. substitution, dependency or exclusivity relationship"
+                }
+              
+            },
+            "allOf": [
+                {
+                  "$ref": "../Common/EntitySpecification.schema.json#/definitions/EntitySpecification"
+                }
+              ]
+        }
+    }
+}
