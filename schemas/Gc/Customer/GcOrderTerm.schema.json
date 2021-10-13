@@ -3,13 +3,11 @@
     "$id": "GcOrderTerm.schema.json",
     "title": "GcOrderTerm",
     "definitions": {
-      "GcOrderTerm": {
-        "$id": "#GcOrderTerm",
-        "description": "Description of a productTerm linked to this orderItem. This represent a commitment with a duration",
-        "type": "object",
-        "properties": {
+        "GcOrderTerm": {
+            "$id": "#GcOrderTerm",
+            "description": "Description of a productTerm linked to this orderItem. This represent a commitment with a duration",
+            "type": "object",
+            "properties": {}
         }
-      }
     }
-  }
-  
+}

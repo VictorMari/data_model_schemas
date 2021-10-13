@@ -3,18 +3,18 @@
     "$id": "GcProductOrderItemStateType.schema.json",
     "title": "GcProductOrderItemStateType",
     "definitions": {
-      "GcProductOrderItemStateType": {
-        "$id": "#GcProductOrderItemStateType",
-        "type": "string",
-        "description": "Possible values for the state of the order",
-        "enum": [
-          "acknowledged",
-          "rejected",
-          "inProgress",
-          "cancelled",
-          "completed",
-          "failed"
-        ]
-      }
+        "GcProductOrderItemStateType": {
+            "$id": "#GcProductOrderItemStateType",
+            "type": "string",
+            "description": "Possible values for the state of the order",
+            "enum": [
+                "acknowledged",
+                "rejected",
+                "inProgress",
+                "cancelled",
+                "completed",
+                "failed"
+            ]
+        }
     }
-  }
+}

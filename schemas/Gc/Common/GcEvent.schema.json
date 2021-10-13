@@ -6,7 +6,12 @@
         "GcEvent": {
             "$id": "#GcEvent",
             "description": "event with common attributes.",
-            "required" : ["eventId", "eventTime", "eventType", "event"],
+            "required": [
+                "eventId",
+                "eventTime",
+                "eventType",
+                "event"
+            ],
             "type": "object",
             "properties": {
                 "eventId": {

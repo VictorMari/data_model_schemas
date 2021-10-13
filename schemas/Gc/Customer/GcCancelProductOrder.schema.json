@@ -11,11 +11,11 @@
                 "productOrder",
                 "state"
             ],
-            "properties": {               
+            "properties": {
                 "state": {
                     "description": "Tracks the lifecycle status of the cancellation request, such as Acknowledged, Rejected, InProgress, Pending and so on.",
                     "$ref": "../Common/GcTaskStateType.schema.json#GcTaskStateType"
-                    },
+                },
                 "productOrder": {
                     "$ref": "../Customer/GcProductOrderRef.schema.json#GcProductOrderRef"
                 }

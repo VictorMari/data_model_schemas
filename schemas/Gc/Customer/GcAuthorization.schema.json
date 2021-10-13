@@ -3,18 +3,19 @@
     "$id": "GcAuthorization.schema.json",
     "title": "GcAuthorization",
     "definitions": {
-      "GcAuthorization": {
-        "$id": "#GcAuthorization",
-        "description": "If special discount or special product offering price or specific condition need an approval for ISP sale representative it is described here.",
-        "type": "object",
-        "required": ["name"],
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Name of the required authorization"
-          }
+        "GcAuthorization": {
+            "$id": "#GcAuthorization",
+            "description": "If special discount or special product offering price or specific condition need an approval for ISP sale representative it is described here.",
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the required authorization"
+                }
+            }
         }
-      }
     }
-  }
-  
+}

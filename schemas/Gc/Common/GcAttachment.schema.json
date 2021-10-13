@@ -1,27 +1,27 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "GcAttachment.schema.json",
-  "title": "GcAttachment",
-  "definitions": {
-    "GcAttachment": {
-      "$id": "#GcAttachment",
-      "description": "Complements the description of an element (for instance a product) through video, pictures...",
-      "type": "object",
-      "properties": {
-        "attachmentType": {
-          "type": "string",
-          "description": "Attachment type such as video, picture"
-        },
-        "mimeType": {
-          "type": "string",
-          "description": "Attachment mime type such as extension file for video, picture and document"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcAttachment.schema.json",
+    "title": "GcAttachment",
+    "definitions": {
+        "GcAttachment": {
+            "$id": "#GcAttachment",
+            "description": "Complements the description of an element (for instance a product) through video, pictures...",
+            "type": "object",
+            "properties": {
+                "attachmentType": {
+                    "type": "string",
+                    "description": "Attachment type such as video, picture"
+                },
+                "mimeType": {
+                    "type": "string",
+                    "description": "Attachment mime type such as extension file for video, picture and document"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Core/Entity.schema.json#Entity"
+                }
+            ]
         }
-      },
-      "allOf": [
-        {
-          "$ref": "../../Core/Entity.schema.json#Entity"
-        }
-      ]
     }
-  }
 }

@@ -27,7 +27,7 @@
                     "type": "string",
                     "format": "date-time",
                     "description": "Date when the quote has been completed"
-                 },
+                },
                 "quoteItem": {
                     "type": "array",
                     "description": "A quote items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",

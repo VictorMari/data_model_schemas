@@ -3,25 +3,24 @@
     "$id": "GcRelatedParty.schema.json",
     "title": "GcRelatedParty",
     "definitions": {
-      "GcRelatedParty": {
-        "$id": "#GcRelatedParty",
-        "description": "Related Entity reference. A related party defines party or party role linked to a specific entity.",
-        "type": "object",
-        "required": [
-          "@referredType"
-        ],
-        "properties": {
-          "@referredType": {
-            "type": "string",
-            "description": "The actual type of the target instance when needed for disambiguation."
-          }
-        },
-        "allOf": [
-          {
-            "$ref": "../../Core/Reference.schema.json#Reference"
-          }
-        ]
-      }
+        "GcRelatedParty": {
+            "$id": "#GcRelatedParty",
+            "description": "Related Entity reference. A related party defines party or party role linked to a specific entity.",
+            "type": "object",
+            "required": [
+                "@referredType"
+            ],
+            "properties": {
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Core/Reference.schema.json#Reference"
+                }
+            ]
+        }
     }
-  }
-  
+}

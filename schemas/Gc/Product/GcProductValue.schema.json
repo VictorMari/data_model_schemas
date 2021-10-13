@@ -3,16 +3,16 @@
     "$id": "GcProductValue.schema.json",
     "title": "GcProductValue",
     "definitions": {
-      "GcProductValue": {
-        "$id": "#GcProductValue",
-        "type": "object",
-        "description": "A product specification or offering procured to a customer or other interested party playing a party role. A product is realized as one or more service(s) and / or resource(s).",
-        "properties": {},
-        "allOf": [
+        "GcProductValue": {
+            "$id": "#GcProductValue",
+            "type": "object",
+            "description": "A product specification or offering procured to a customer or other interested party playing a party role. A product is realized as one or more service(s) and / or resource(s).",
+            "properties": {},
+            "allOf": [
                 {
                     "$ref": "../../Core/Extensible.schema.json#Extensible"
                 }
             ]
-      }
+        }
     }
-  }
+}

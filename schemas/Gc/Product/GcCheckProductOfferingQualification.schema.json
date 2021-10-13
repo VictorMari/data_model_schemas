@@ -3,40 +3,39 @@
     "$id": "GcCheckProductOfferingQualification.schema.json",
     "title": "GcCheckProductOfferingQualification",
     "definitions": {
-      "GcCheckProductOfferingQualification": {
-        "$id": "#GcCheckProductOfferingQualification",
-        "type": "object",
-        "required": [
-          "CheckProductOfferingQualificationItem",
-          "creationDate",
-          "state"
-        ],
-        "description": "Generic Contect schema for CheckProductOfferingQualification.",
-        "properties": {
-            "creationDate": {
-              "type": "string",
-              "format": "date-time",
-              "description": "Date and time when the CheckProductOfferingQualification was created"
+        "GcCheckProductOfferingQualification": {
+            "$id": "#GcCheckProductOfferingQualification",
+            "type": "object",
+            "required": [
+                "CheckProductOfferingQualificationItem",
+                "creationDate",
+                "state"
+            ],
+            "description": "Generic Contect schema for CheckProductOfferingQualification.",
+            "properties": {
+                "creationDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date and time when the CheckProductOfferingQualification was created"
+                },
+                "state": {
+                    "$ref": "../Common/GcTaskStateType.schema.json#GcTaskStateType",
+                    "description": "State of the CheckProductOfferingQualification : described in the state-machine diagram"
+                },
+                "checkProductOfferingQualificationItem": {
+                    "type": "array",
+                    "description": "An item of the CheckProductOfferingQualification - it is used to describe an operation on a product to be commercially checked",
+                    "items": {
+                        "$ref": "../Product/GcCheckProductOfferingQualificationItem.schema.json#GcCheckProductOfferingQualificationItem"
+                    },
+                    "minItems": 1
+                }
             },
-            "state": {
-              "$ref": "../Common/GcTaskStateType.schema.json#GcTaskStateType",
-              "description": "State of the CheckProductOfferingQualification : described in the state-machine diagram"
-            },
-            "checkProductOfferingQualificationItem": {
-              "type": "array",
-              "description": "An item of the CheckProductOfferingQualification - it is used to describe an operation on a product to be commercially checked",
-              "items": {
-                "$ref": "../Product/GcCheckProductOfferingQualificationItem.schema.json#GcCheckProductOfferingQualificationItem"
-              },
-              "minItems": 1
-            }
-        },
-        "allOf": [
-          {
-            "$ref": "../../Core/Extensible.schema.json#Extensible"
-          }
-        ]
-      }
+            "allOf": [
+                {
+                    "$ref": "../../Core/Extensible.schema.json#Extensible"
+                }
+            ]
+        }
     }
-  }
-  
+}

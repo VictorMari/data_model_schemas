@@ -3,17 +3,16 @@
     "$id": "GcChannelRef.schema.json",
     "title": "GcChannelRef",
     "definitions": {
-      "GcChannelRef": {
-        "$id": "#GcChannelRef",
-        "type": "object",
-        "description": "Reference to a channel -  May be online web, mobile app, social ,etc.",
-        "properties": {
-        },
-        "allOf": [
-          {
-            "$ref": "../../Core/Reference.schema.json#Reference"
-          }
-        ]
-      }
+        "GcChannelRef": {
+            "$id": "#GcChannelRef",
+            "type": "object",
+            "description": "Reference to a channel -  May be online web, mobile app, social ,etc.",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "../../Core/Reference.schema.json#Reference"
+                }
+            ]
+        }
     }
-  }
+}

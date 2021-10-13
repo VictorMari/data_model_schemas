@@ -3,30 +3,29 @@
     "$id": "GcProductOrderItem.schema.json",
     "title": "GcProductOrderItem",
     "definitions": {
-      "GcProductOrderItem": {
-        "$id": "#GcProductOrderItem",
-        "type": "object",
-        "required": [
-          "action", 
-          "id", 
-          "state"
-          ],
-        "description": "A ProductOrder items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
-        "properties": {
-          "action": {
-            "$ref": "../Common/GcItemActionType.schema.json#GcItemActionType",
-            "description": "The action to be carried out on the Product. Can be: add, modify, delete"
-          },
-          "id": {
-            "type": "string",
-            "description": "Identifier of the ProductOrder item (generally it is a sequence number 01, 02, 03, ...)"
-          },
-          "state": {
-            "$ref": "../Customer/GcProductOrderItemStateType.schema.json#GcProductOrderItemStateType",
-            "description": "State of the ProductOrder item : described in the state machine diagram"
-          }
+        "GcProductOrderItem": {
+            "$id": "#GcProductOrderItem",
+            "type": "object",
+            "required": [
+                "action",
+                "id",
+                "state"
+            ],
+            "description": "A ProductOrder items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
+            "properties": {
+                "action": {
+                    "$ref": "../Common/GcItemActionType.schema.json#GcItemActionType",
+                    "description": "The action to be carried out on the Product. Can be: add, modify, delete"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the ProductOrder item (generally it is a sequence number 01, 02, 03, ...)"
+                },
+                "state": {
+                    "$ref": "../Customer/GcProductOrderItemStateType.schema.json#GcProductOrderItemStateType",
+                    "description": "State of the ProductOrder item : described in the state machine diagram"
+                }
+            }
         }
-      }
     }
-  }
-  
+}

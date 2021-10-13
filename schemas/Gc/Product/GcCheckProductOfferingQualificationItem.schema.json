@@ -3,30 +3,33 @@
     "$id": "GcCheckProductOfferingQualificationItem.schema.json",
     "title": "GcCheckProductOfferingQualificationItem",
     "definitions": {
-      "GcCheckProductOfferingQualificationItem": {
-        "$id": "#GcCheckProductOfferingQualificationItem",
-        "type": "object",
-        "required": ["action", "id", "state"],
-        "description": "A ProductOfferingQualification items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
-        "properties": {
-          "action": {
-            "type": "string",
-            "description": "Action to be performed on a ProductOffering or product in order to be qualified(add, modify, remove, etc.)"
-          },
-          "id": {
-            "type": "string",
-            "description": "Identifier of the ProductOfferingQualification item (generally it is a sequence number 01, 02, 03, ...)"
-          },
-          "qualificationItemResult": {
-            "type": "string",
-            "description": "Qualification result for this productOfferingQualification item. It could be qualified (request productOffering or productSpecification are available), unqualified (requested not available and not alternate available), alternate (requested not available but alternate proposal available)"
-          },
-          "state": {
-            "$ref": "../Common/GcTaskStateType.schema.json#GcTaskStateType",
-            "description": "State of the ProductOfferingQualification item : described in the state machine diagram"
-          }
+        "GcCheckProductOfferingQualificationItem": {
+            "$id": "#GcCheckProductOfferingQualificationItem",
+            "type": "object",
+            "required": [
+                "action",
+                "id",
+                "state"
+            ],
+            "description": "A ProductOfferingQualification items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
+            "properties": {
+                "action": {
+                    "type": "string",
+                    "description": "Action to be performed on a ProductOffering or product in order to be qualified(add, modify, remove, etc.)"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the ProductOfferingQualification item (generally it is a sequence number 01, 02, 03, ...)"
+                },
+                "qualificationItemResult": {
+                    "type": "string",
+                    "description": "Qualification result for this productOfferingQualification item. It could be qualified (request productOffering or productSpecification are available), unqualified (requested not available and not alternate available), alternate (requested not available but alternate proposal available)"
+                },
+                "state": {
+                    "$ref": "../Common/GcTaskStateType.schema.json#GcTaskStateType",
+                    "description": "State of the ProductOfferingQualification item : described in the state machine diagram"
+                }
+            }
         }
-      }
     }
-  }
-  
+}

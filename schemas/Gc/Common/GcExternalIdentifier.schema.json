@@ -11,7 +11,7 @@
                 "id"
             ],
             "properties": {
-                 "id": {
+                "id": {
                     "type": "string",
                     "description": "identification of the entity within the external system."
                 }

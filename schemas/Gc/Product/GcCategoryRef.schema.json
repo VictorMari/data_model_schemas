@@ -3,16 +3,16 @@
     "$id": "GcCategoryRef.schema.json",
     "title": "GcCategoryRef",
     "definitions": {
-      "GcCategoryRef": {
-        "$id": "#GcCategoryRef",
-        "type": "object",
-        "description": "Reference to a category in the catalog.",
-        "properties": {},
-        "allOf": [
-          {
-            "$ref": "../../Core/Reference.schema.json#Reference"
-          }
-        ]
-      }
+        "GcCategoryRef": {
+            "$id": "#GcCategoryRef",
+            "type": "object",
+            "description": "Reference to a category in the catalog.",
+            "properties": {},
+            "allOf": [
+                {
+                    "$ref": "../../Core/Reference.schema.json#Reference"
+                }
+            ]
+        }
     }
-  }
+}

@@ -3,29 +3,29 @@
     "$id": "GcGeographicAddressValue.schema.json",
     "title": "GcGeographicAddressValue",
     "definitions": {
-      "GcGeographicAddressValue": {
-        "$id": "#GcGeographicAddressValue",
-        "type": "object",
-        "description": "Structured textual way of describing how to find a Property in an urban area (country properties are often defined differently).\nNote : Address corresponds to SID UrbanPropertyAddress",
-        "properties": {
-            "city": {
-                "type": "string",
-                "description": "City that the address is in"
-              },
-              "country": {
-                "type": "string",
-                "description": "Country that the address is in"
-              },
-              "streetName": {
-                "type": "string",
-                "description": "Name of the street or other street type"
-              }    
-        },
-        "allOf": [
+        "GcGeographicAddressValue": {
+            "$id": "#GcGeographicAddressValue",
+            "type": "object",
+            "description": "Structured textual way of describing how to find a Property in an urban area (country properties are often defined differently).\nNote : Address corresponds to SID UrbanPropertyAddress",
+            "properties": {
+                "city": {
+                    "type": "string",
+                    "description": "City that the address is in"
+                },
+                "country": {
+                    "type": "string",
+                    "description": "Country that the address is in"
+                },
+                "streetName": {
+                    "type": "string",
+                    "description": "Name of the street or other street type"
+                }
+            },
+            "allOf": [
                 {
                     "$ref": "../../Core/Extensible.schema.json#Extensible"
                 }
             ]
-      }
+        }
     }
-  }
+}

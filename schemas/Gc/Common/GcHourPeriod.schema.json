@@ -7,9 +7,7 @@
             "$id": "#GcHourPeriod",
             "description": "Used to describe a Hour period.",
             "type": "object",
-            "properties": {
-
-            }
+            "properties": {}
         }
     }
 }

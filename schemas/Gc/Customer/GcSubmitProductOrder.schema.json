@@ -8,9 +8,9 @@
             "description": "A SubmitProductOrder is a task used to place a request to submit a (draft) product order",
             "type": "object",
             "required": [
-                    "productOrder"
+                "productOrder"
             ],
-            "properties": {               
+            "properties": {
                 "productOrder": {
                     "$ref": "../Customer/GcProductOrderRef.schema.json#GcProductOrderRef"
                 }

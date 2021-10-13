@@ -1,26 +1,26 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "GcGeographicSubAddressUnit.schema.json",
-  "title": "GcGeographicSubAddressUnit",
-  "definitions": {
-    "GcGeographicSubAddressUnit": {
-      "$id": "#GcGeographicSubAddressUnit",
-      "description": "Representation of a SubUnit. It is used for describing subunit within a subAddress e.g. BERTH, FLAT, PIER, SUITE, SHOP, TOWER, UNIT, WHARF.",
-      "type": "object",
-      "properties": {
-        "subUnitNumber": {
-          "type": "string",
-          "description": "The discriminator used for the subunit, often just a simple number but may also be a range."
-        },
-        "subUnitType": {
-          "type": "string",
-          "description": "The type of subunit e.g.BERTH, FLAT, PIER, SUITE, SHOP, TOWER, UNIT, WHARF, RACK"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcGeographicSubAddressUnit.schema.json",
+    "title": "GcGeographicSubAddressUnit",
+    "definitions": {
+        "GcGeographicSubAddressUnit": {
+            "$id": "#GcGeographicSubAddressUnit",
+            "description": "Representation of a SubUnit. It is used for describing subunit within a subAddress e.g. BERTH, FLAT, PIER, SUITE, SHOP, TOWER, UNIT, WHARF.",
+            "type": "object",
+            "properties": {
+                "subUnitNumber": {
+                    "type": "string",
+                    "description": "The discriminator used for the subunit, often just a simple number but may also be a range."
+                },
+                "subUnitType": {
+                    "type": "string",
+                    "description": "The type of subunit e.g.BERTH, FLAT, PIER, SUITE, SHOP, TOWER, UNIT, WHARF, RACK"
+                }
+            },
+            "required": [
+                "subUnitNumber",
+                "subUnitType"
+            ]
         }
-      },
-      "required": [
-        "subUnitNumber",
-        "subUnitType"
-      ]
     }
-  }
 }

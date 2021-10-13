@@ -3,15 +3,15 @@
     "$id": "GcItemActionType.schema.json",
     "title": "GcItemActionType",
     "definitions": {
-      "GcItemActionType": {
-        "$id": "#GcItemActionType",
-        "description": "action to be performed on the entity managed by the item",
-        "type": "string",
-        "enum": [
-          "add",
-          "modify",
-          "delete"
-        ]
-      }
+        "GcItemActionType": {
+            "$id": "#GcItemActionType",
+            "description": "action to be performed on the entity managed by the item",
+            "type": "string",
+            "enum": [
+                "add",
+                "modify",
+                "delete"
+            ]
+        }
     }
-  }
+}

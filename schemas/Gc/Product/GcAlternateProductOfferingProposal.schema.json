@@ -19,7 +19,7 @@
                 "alternateProductOffering": {
                     "$ref": "../Product/GcProductOfferingRef.schema.json#GcProductOfferingRef",
                     "description": "Alternate product offering proposal"
-                  }
+                }
             }
         }
     }

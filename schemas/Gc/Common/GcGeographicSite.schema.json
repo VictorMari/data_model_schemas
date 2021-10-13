@@ -7,8 +7,7 @@
             "$id": "#GcGeographicSite",
             "description": "",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "allOf": [
                 {
                     "$ref": "../../Core/Entity.schema.json#Entity"

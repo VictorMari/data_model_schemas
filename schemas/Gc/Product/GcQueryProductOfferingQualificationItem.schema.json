@@ -3,18 +3,21 @@
     "$id": "GcQueryProductOfferingQualificationItem.schema.json",
     "title": "GcQueryProductOfferingQualificationItem",
     "definitions": {
-      "GcQueryProductOfferingQualificationItem": {
-        "$id": "#GcQueryProductOfferingQualificationItem",
-        "type": "object",
-        "required": ["action", "id", "state"],
-        "description": "A ProductOfferingQualification items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "Identifier of the ProductOfferingQualification item (generally it is a sequence number 01, 02, 03, ...)"
-          }
+        "GcQueryProductOfferingQualificationItem": {
+            "$id": "#GcQueryProductOfferingQualificationItem",
+            "type": "object",
+            "required": [
+                "action",
+                "id",
+                "state"
+            ],
+            "description": "A ProductOfferingQualification items describe an action to be performed on a productOffering or a product in order to get pricing elements and condition.",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Identifier of the ProductOfferingQualification item (generally it is a sequence number 01, 02, 03, ...)"
+                }
+            }
         }
-      }
     }
-  }
-  
+}

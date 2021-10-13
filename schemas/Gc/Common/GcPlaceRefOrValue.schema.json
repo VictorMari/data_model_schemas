@@ -7,8 +7,7 @@
             "$id": "#GcPlaceRefOrValue",
             "description": "A  place described by reference or by value. The polymorphic attributes @type, @schemaLocation & @referredType are related to the place entity and not the PlaceRefOrValue class itself",
             "type": "object",
-            "properties": {
-            },
+            "properties": {},
             "allOf": [
                 {
                     "$ref": "../../Core/Extensible.schema.json#Extensible"

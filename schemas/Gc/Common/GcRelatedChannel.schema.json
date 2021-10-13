@@ -1,26 +1,26 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "GcRelatedChannel.schema.json",
-  "title": "GcRelatedChannel",
-  "definitions": {
-    "GcRelatedChannel": {
-      "$id": "#GcRelatedChannel",
-      "type": "object",
-      "required" : ["role"],
-      "description": "Related channel to another entity. May be online web, mobile app, social ,etc.",
-      "properties": {
-        "role": {
-          "type": "string",
-          "description": "Role playing by the channel."
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GcRelatedChannel.schema.json",
+    "title": "GcRelatedChannel",
+    "definitions": {
+        "GcRelatedChannel": {
+            "$id": "#GcRelatedChannel",
+            "type": "object",
+            "required": [
+                "role"
+            ],
+            "description": "Related channel to another entity. May be online web, mobile app, social ,etc.",
+            "properties": {
+                "role": {
+                    "type": "string",
+                    "description": "Role playing by the channel."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../../Core/Reference.schema.json#Reference"
+                }
+            ]
         }
-      },
-      "allOf": [
-        {
-          "$ref": "../../Core/Reference.schema.json#Reference"
-        }
-      ]
     }
-  }
 }
-
-  

@@ -3,31 +3,30 @@
     "$id": "GcQueryProductOfferingQualification.schema.json",
     "title": "GcQueryProductOfferingQualification",
     "definitions": {
-      "GcQueryProductOfferingQualification": {
-        "$id": "#GcQueryProductOfferingQualification",
-        "type": "object",
-        "required": [
-          "creationDate",
-          "state"
-        ],
-        "description": "Generic Contect schema for QueryProductOfferingQualification.",
-        "properties": {
-           "creationDate": {
-              "type": "string",
-              "format": "date-time",
-              "description": "Date and time when the QueryProductOfferingQualification was created"
+        "GcQueryProductOfferingQualification": {
+            "$id": "#GcQueryProductOfferingQualification",
+            "type": "object",
+            "required": [
+                "creationDate",
+                "state"
+            ],
+            "description": "Generic Contect schema for QueryProductOfferingQualification.",
+            "properties": {
+                "creationDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date and time when the QueryProductOfferingQualification was created"
+                },
+                "state": {
+                    "$ref": "../Common/GcTaskStateType.schema.json#GcTaskStateType",
+                    "description": "State of the QueryProductOfferingQualification : described in the state-machine diagram"
+                }
             },
-            "state": {
-              "$ref": "../Common/GcTaskStateType.schema.json#GcTaskStateType",
-              "description": "State of the QueryProductOfferingQualification : described in the state-machine diagram"
-            }
-        },
-        "allOf": [
-          {
-            "$ref": "../../Core/Extensible.schema.json#Extensible"
-          }
-        ]
-      }
+            "allOf": [
+                {
+                    "$ref": "../../Core/Extensible.schema.json#Extensible"
+                }
+            ]
+        }
     }
-  }
-  
+}
