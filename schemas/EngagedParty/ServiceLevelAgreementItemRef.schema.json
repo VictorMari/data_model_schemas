@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ServiceLevelAgreementItemRef.schema.json",
+    "title": "ServiceLevelAgreementItemRef",
+    "definitions": {
+        "ServiceLevelAgreementItemRef": {
+            "$id": "#ServiceLevelAgreementItemRef",
+            "type": "object",
+            "properties": {
+                "itemId": {
+                    "type": "string",
+                    "description": "Identifier of the item"
+                },
+                "parentId": {
+                    "type": "string",
+                    "description": "Identifier of the parent SLA that this item belongs to"
+                },
+                "parentHref": {
+                    "type": "string",
+                    "description": "Link to the SLA to which this item belongs to",
+                    "format": "uri"
+                },
+                "@referredType": {
+                    "type": "string",
+                    "description": "The actual type of the target instance when needed for disambiguation."
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Extensible.schema.json#Extensible"
+                }
+            ]
+        }
+    }
+}

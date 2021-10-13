@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "MetadataCatalog.schema.json",
+    "title": "MetadataCatalog",
+    "definitions": {
+      "MetadataCatalog": {
+        "$id": "#MetadataCatalog",
+        "description": "Additional information to describe the catalog",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the MetadataCatalog"
+          },
+          "description": {
+            "type": "string",
+            "description": "A narrative text describing the content of the MetadataCatalog",
+            "examples": [
+              "Operational",
+              "Intelligence"
+            ]
+          },
+          "lastUpdateDate":{
+            "type": "string",
+            "description": "The date and time the metadata asset was last updated",
+            "examples": "2021-09-15"
+            },
+          "attachment": {
+              "$ref": "../Common/Attachment.schema.json#Attachment"
+          }
+        },
+        "allOf": [
+          {
+            "$ref": "../Common/Entity.schema.json#Entity"
+          }
+        ]
+      }
+    }
+  }

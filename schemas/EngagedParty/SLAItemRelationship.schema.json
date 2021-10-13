@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "SLAItemRelationship.schema.json",
+    "title": "SLAItemRelationship",
+    "definitions": {
+        "SLAItemRelationship": {
+            "$id": "#SLAItemRelationship",
+            "type": "object",
+            "description": "relationship to another SLA item",
+            "properties": {
+                "agreementItem": {
+                    "description": "A service level agreement item in relationship with this item",
+                    "$ref": "../EngagedParty/ServiceLevelAgreementItemRef.schema.json#/definitions/ServiceLevelAgreementItemRef"
+                },
+                "role": {
+                  "type": "string",
+                  "description": "The association role for this SLA item"
+                },
+                "relationshipType": {
+                  "type": "string",
+                  "description": "Type of relationship such as containment, substitution, dependency, exclusivity"
+                },
+                "validFor": {
+                  "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                  "description": "The period for which the Relationship is valid"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Extensible.schema.json#/definitions/Extensible"
+                }
+            ],
+            "required": [
+                "agreementItem",
+                "relationshipType"
+            ]
+        }
+    }
+}

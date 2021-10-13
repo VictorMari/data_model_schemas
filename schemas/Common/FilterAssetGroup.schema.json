@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "FilterAssetGroup.schema.json",
+  "title": "FilterAssetGroup",
+  "definitions": {
+    "FilterAssetGroup": {
+      "$id": "#FilterAssetGroup",
+      "description": "Defines a group of assets (entities) to which access can be controlled, using a filter expression. Any entities matching the filter are implicitly included in the group. The embedded example implies all Products owned by a specific customer",
+      "type": "object",
+      "properties": {
+        "entityType": {
+          "type": "string",
+          "description": "The type of entity in the group, equivalent to @type in the entity definition. Must be a top-level managed entity. The filter expression is applied to this entity type.",
+          "examples": [
+            "Product"
+          ]
+        },
+        "filter": {
+          "type": "string",
+          "description": "The filter expression that defines the entities covered by a permission set, format of the filter is as per the simple query parameter filter as defined in TMF630",
+          "examples": [
+            "relatedParty.id=\"cid3366116688\"&relatedParty.@referredType=\"Customer\""
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/AssetGroup.schema.json#AssetGroup"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "SetAssetGroup.schema.json",
+  "title": "SetAssetGroup",
+  "definitions": {
+    "SetAssetGroup": {
+      "$id": "#SetAssetGroup",
+      "description": "Defines a group of assets (entities) to which access can be controlled, using a predefined name that implies a list of entity types",
+      "type": "object",
+      "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of the list",
+            "examples": [
+                "CommercialProductCatalogEntities"
+            ]
+        },
+        "entityType": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "List of entity types for this named list",
+            "examples": [
+                "{\"ProductOffering\",\"ProductOfferingPrice\"}"
+            ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/AssetGroup.schema.json#AssetGroup"
+        }
+      ]
+    }
+  }
+}

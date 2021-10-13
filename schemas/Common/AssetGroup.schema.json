@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "AssetGroup.schema.json",
+  "title": "AssetGroup",
+  "definitions": {
+    "AssetGroup": {
+      "$id": "#AssetGroup",
+      "description": "Defines a group of assets (entities) to which access can be controlled. Specific subclasses allow definition in various ways (list of entities, queries, ownership by customer, etc.)",
+      "type": "object",
+      "properties": {
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Entity.schema.json#Entity"
+        }
+      ]
+    }
+  }
+}

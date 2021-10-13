@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "MetadataCatalogItemRef.schema.json",
+  "title": "MetadataCatalogItemRef",
+  "definitions": {
+    "MetadataCatalogItemRef": {
+      "$id": "#MetadataCatalogItemRef",
+      "description": "Reference to Metadata Category Item object.",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Catalog Item version"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/EntityRef.schema.json#/definitions/EntityRef"
+        }
+      ]
+    }
+  }
+}

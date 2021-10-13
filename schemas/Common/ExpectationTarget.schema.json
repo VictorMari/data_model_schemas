@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ExpectationTarget.schema.json",
+  "title": "ExpectationTarget",
+  "definitions": {
+    "ExpectationTarget": {
+      "$id": "#ExpectationTarget",
+      "description": "ExpectationTarget represents an expectation target",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "free-text description of the expectation target"
+        },
+        "validFor": {
+          "$ref": "../Common/TimePeriod.schema.json#TimePeriod", 
+          "description": "The period for which this expectation is valid"
+        },
+        "name": {
+          "type": "string",
+          "description": "A string used to give a name to the target"
+        },
+        "entity": {
+          "type": "array",
+          "items": {
+                  "$ref": "../Common/EntityRef.schema.json#/definitions/EntityRef"
+          },
+          "description": "A list of target entities related. A target defines to what instance or artifact the requirement and constraints are applicable"
+        },
+        "constraint": {
+					"description": "This is a list of constraint references applied to this expectation target",
+					"type": "array",
+					"items": {
+						"$ref": "../Common/ConstraintRef.schema.json#/definitions/ConstraintRef"
+					}
+				},
+        "characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Extensible.schema.json#/definitions/Extensible"
+        }
+      ]
+    }
+  }
+}

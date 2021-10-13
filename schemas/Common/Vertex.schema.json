@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Vertex.schema.json",
+    "title": "Vertex (addressable)",
+    "definitions": {
+        "Vertex": {
+            "type": "object",
+            "description": "A Vertex is connected by directed Edges to other vertices in a Graph.",
+            "properties": {
+                "graph": {
+                    "description": "Graph which this Vertex is contained in.",
+                    "$ref": "GraphRef.schema.json#GraphRef"
+                },
+                "edge": {
+                    "description": "Directed Edges which this Vertex is connected by. (optional, read only)",
+                    "type": "array",
+                    "items": {
+                        "$ref": "EdgeRef.schema.json#EdgeRef"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "VertexBase.schema.json#VertexBase"
+                },
+                {
+                    "$ref": "Addressable.schema.json#Addressable"
+                }
+            ]
+        }
+    }
+}

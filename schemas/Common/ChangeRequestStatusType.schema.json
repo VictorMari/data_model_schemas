@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ChangeRequestStatusType.schema.json",
+    "title": "ChangeRequestStatusType",
+    "definitions": {
+        "ChangeRequestStatusType": {
+            "$id": "#ChangeRequestStatusType",
+            "type": "string",
+            "description": "Possible values for the state of the change request",
+            "enum": [
+                 "acknowledged",
+                 "requestForAuthorization",
+                 "waitForApproval",
+                 "approved",
+                 "scheduled",
+                 "postImplementationReview",
+                 "fallbackExecution",
+                 "cancelled",
+                 "rejected",
+                 "inProgress",
+                 "failed",
+                 "completed"
+                 
+            ]
+        }
+    }
+}

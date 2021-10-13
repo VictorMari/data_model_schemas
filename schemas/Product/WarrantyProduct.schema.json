@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "WarrantyProduct.schema.json",
+    "title": "WarrantyProduct",
+    "definitions": {
+        "WarrantyProduct": {
+            "$id": "#WarrantyProduct",
+            "type": "object",
+            "properties": {
+                "productSpecification": {
+                    "$ref": "../Product/WarrantyProductSpecificationRef.schema.json#/definitions/WarrantyProductSpecificationRef"
+                },
+                "warranty": {
+                    "$ref": "../Product/WarrantyRef.schema.json#/definitions/WarrantyRef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Product/Product.schema.json#/definitions/Product"
+                }
+            ]
+        }
+    }
+}

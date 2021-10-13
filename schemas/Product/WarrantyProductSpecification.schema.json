@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "WarrantyProductSpecification.schema.json",
+    "title": "WarrantyProductSpecification",
+    "definitions": {
+        "WarrantyProductSpecification": {
+            "$id": "#WarrantyProductSpecification",
+            "type": "object",
+            "properties": {
+                "warrantySpecification": {
+                    "$ref": "../Product/WarrantySpecificationRef.schema.json#/definitions/WarrantySpecificationRef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Product/ProductSpecification.schema.json#/definitions/ProductSpecification"
+                }
+            ]
+        }
+    }
+}

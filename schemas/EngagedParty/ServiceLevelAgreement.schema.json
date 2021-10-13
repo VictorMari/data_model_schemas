@@ -1,0 +1,141 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "$id": "ServiceLevelAgreement.schema.json", 
+    "title": "ServiceLevelAgreement", 
+    "definitions": {
+        "ServiceLevelAgreement": {
+            "$id": "#ServiceLevelAgreement",
+            "description": "Service Level Agreement (SLA) is a type of agreement that represents targets formally or informally agreed between parties in order to achieve and maintain specified Quality of Service.",
+            "type": "object", 
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "verbal description of the Service Level Agreement (SLA)"
+                },
+                "initialDate": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Date at which the agreement was initialized"
+                },
+                "lastUpdate": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Date and time of the last update"
+                },
+                "completionDate": {
+                  "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                  "description": "Date at which the agreement is completed"
+                },
+                "statementOfIntent": {
+                  "type": "string",
+                  "description": "An overview and goals of the Agreement"
+                },
+                "lifecycleStatus": {
+                  "type": "string", 
+                  "description": "The current lifecycle status of the SLA. Typical values are: in-process, approved and rejected"
+                },
+                "statusChangeDate": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "A date time( DateTime). The date that the entity status changed to the current one"
+                },
+                "agreementType": {
+                  "type": "string",
+                  "description": "The type of the agreement. For example commercial, operational"
+                },
+                "externalId": {
+                  "type": "string",
+                  "description": "external identifier"
+                },
+                "version": {
+                  "type": "string",
+                  "description": "A string identifying the version of the agreement"
+                },
+                "agreementSpecification": {
+                  "description": "reference to the corresponding specification for this SLA",
+                  "$ref": "../EngagedParty/AgreementSpecificationRef.schema.json#/definitions/AgreementSpecificationRef"
+                },
+                "agreementItem": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../EngagedParty/ServiceLevelAgreementItem.schema.json#/definitions/ServiceLevelAgreementItem"
+                  },
+                  "minItems": 1
+                },
+                "termOrCondition": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../EngagedParty/AgreementTermOrCondition.schema.json#/definitions/AgreementTermOrCondition"
+                  }
+                },
+                "agreementAuthorization": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../EngagedParty/AgreementAuthorization.schema.json#/definitions/AgreementAuthorization"
+                  }
+                },
+                "characteristic": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../Common/Characteristic.schema.json#/definitions/Characteristic"
+                  }
+                },
+                "relatedParty": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+                  },
+                  "minItems": 1
+                },
+                "attachment": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../Common/AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
+                  },
+                  "description": "Attachments that may be of relevance to this entity, such as picture, document, media"
+                },
+                "note": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../Common/Note.schema.json#/definitions/Note"
+                  }
+                },
+                "agreementRelationship": {
+                  "type": "array",
+                  "description": "A relationship from this SLA to another agreement/SLA",
+                  "items": {
+                    "$ref": "../EngagedParty/AgreementRelationship.schema.json#/definitions/AgreementRelationship"
+                  }
+                },
+                "name": {
+                    "type": "string",
+                    "description": "name associated with the SLA"
+                },
+                "constraint": {
+        					"description": "This is a list of references to rules applied to this SLA",
+        					"type": "array",
+        					"items": {
+        						"$ref": "../Common/ConstraintRef.schema.json#/definitions/ConstraintRef"
+        					}
+        				},
+        				"entityRelationship": {
+                  "type": "array",
+                  "description": "Relationship to another entity",
+                  "items": {
+                    "$ref": "../Common/EntityRelationship.schema.json#/definitions/EntityRelationship"
+                  }
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                    "description": "The period for which the SLA is valid  (A period of time, either as a deadline (endDateTime only) a startDateTime only, or both)"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#/definitions/Entity"
+                }
+            ]
+
+        }
+    }
+}

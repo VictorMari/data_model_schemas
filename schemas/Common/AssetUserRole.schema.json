@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "AssetUserRole.schema.json",
+    "title": "AssetUserRole",
+    "definitions": {
+        "AssetUserRole": {
+            "$id": "#AssetUserRole",
+            "description": "The AssetUserRole is the detailed information concerning an individual user role",
+            "type": "object",
+            "required": [
+                "manageableAsset",
+                "userRole"
+            ],
+            "properties": {
+                "manageableAsset": {
+                    "$ref": "../Common/EntityRef.schema.json#EntityRef"
+                },
+                "managedAssetGroup": {
+                    "$ref": "../Common/AssetGroup.schema.json#AssetGroup",
+                    "description": "List (explicit or implied) of entities managed by this user role assignment."
+                },
+                "userRole": {
+                    "$ref": "../Common/UserRoleRef.schema.json#UserRoleRef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/Entity.schema.json#Entity"
+                }
+            ]
+        }
+    }
+}

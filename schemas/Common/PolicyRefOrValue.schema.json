@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "PolicyRefOrValue.schema.json",
+  "title": "PolicyRefOrValue",
+  "definitions": {
+      "PolicyRefOrValue": {
+          "$id": "#PolicyRefOrValue",
+          "description": "A reference or value of the Policy Entity",
+          "type": "object",
+          "properties": {
+          },
+          "allOf": [
+              {
+                "$ref": "PolicyRef.schema.json#PolicyRef"
+              },
+              {
+                "$ref": "Policy.schema.json#Policy"
+              }
+              
+          ]
+      }
+  }
+}

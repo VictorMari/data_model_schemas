@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Warranty.schema.json",
+    "title": "Warranty",
+    "definitions": {
+        "Warranty": {
+            "$id": "#Warranty",
+            "type": "object",
+            "properties": {
+                "appliesToProduct": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/ProductRefOrValue.schema.json#/definitions/ProductRefOrValue"
+                    }
+                },
+                "appliesToResource": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Resource/ResourceRefOrValue.schema.json#/definitions/ResourceRefOrValue"
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "description": "free-text description of the entity"
+                },
+                "endDate": {
+                    "type": "string",
+                    "description": "A date time( DateTime). The date till the entity is effective"
+                },
+                "place": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Common/RelatedPlaceRefOrValue.schema.json#/definitions/RelatedPlaceRefOrValue"
+                    }
+                },
+                "startDate": {
+                    "type": "string",
+                    "description": "A date time( DateTime). The date from which the entity is effective"
+                },
+                "state": {
+                    "$ref": "../Product/WarrantyStateType.schema.json#/definitions/WarrantyStateType"
+                },
+                "statusChangeDate": {
+                    "type": "string",
+                    "description": "A date time( DateTime). The date that the entity status changed"
+                },
+                "validFor": {
+                    "$ref": "../Common/TimePeriod.schema.json#/definitions/TimePeriod"
+                },
+                "warranty": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/Warranty.schema.json#/definitions/Warranty"
+                    }
+                },
+                "warrantyAgreement": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../EngagedParty/AgreementRef.schema.json#/definitions/AgreementRef"
+                    }
+                },
+                "warrantyRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/WarrantyRelationship.schema.json#/definitions/WarrantyRelationship"
+                    }
+                },
+                "warrantySpecification": {
+                    "$ref": "../Product/WarrantySpecificationRef.schema.json#/definitions/WarrantySpecificationRef"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/MEntity.schema.json#/definitions/MEntity"
+                }
+            ]
+        }
+    }
+}

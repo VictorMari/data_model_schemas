@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "MetadataAsset.schema.json",
+    "title": "MetadataAsset",
+    "definitions": {
+      "MetadataAsset": {
+        "$id": "#MetadataAsset",
+        "description": "The unique identifier of the metadata asset.",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the MetadataAsset"
+          },
+          "description": {
+            "type": "string",
+            "description": "A narrative text describing the metadata asset",
+            "examples": [
+              "Table containing customer information",
+              "Contains the persons first name"
+            ]
+            },
+            "lifeCycleStatus": {
+            "type": "string",
+            "description": "The status of the metadata asset",
+            "examples":[
+            "Candidate",
+            "Under Review",
+            "Approved",
+            "Obsolete"
+            ]
+            },
+            "lastUpdateDate":{
+            "type": "string",
+            "description": "The date and time the metadata asset was last updated",
+            "examples": "2021-09-15"
+            },
+            "version":{
+            "type": "string",
+            "description": "The current version of the asset if applicable to the asset type",
+            "examples": "1.0"
+            },
+           "metadataSpecification": {
+              "$ref": "../DataGovernance/MetadataSpecificationRef.schema.json#/definitions/MetadataSpecificationRef"
+            },
+           "characteristic": {
+              "$ref": "../Common/Characteristic.schema.json#Characteristic"
+            },
+          "relatedParty": {
+          "type": "array",
+          "items": {
+            "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+            }
+          },
+           "metadataRelation": {
+             "type": "array",
+             "items": {
+              "$ref": "../DataGovernance/MetadataRelation.schema.json#MetadataRelation"
+             }
+          },
+           "agreement": {
+              "$ref": "../EngagedParty/Agreement.schema.json#Agreement"
+          },
+          "attachment": {
+              "$ref": "../Common/Attachment.schema.json#Attachment"
+          },
+          "note": {
+              "$ref": "../Common/Note.schema.json#Note"
+          },
+          "policy": {
+              "$ref": "../Common/Policy.schema.json#Policy"
+          }
+        },
+        "allOf": [
+          {
+            "$ref": "../Common/Entity.schema.json#Entity"
+          }
+        ]
+      }
+    }
+  }

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "DataSharingAgreementItem.schema.json",
+  "title": "DataSharingAgreementItem",
+  "definitions": {
+    "DataSharingAgreementItem": {
+      "$id": "#DataSharingAgreementItem",
+      "description": "A part of the agreement expressed in terms of a product offering and possibly including specific terms and conditions.",
+      "type": "object",
+      "properties": {
+        "MetadataAsset": {
+          "description": "The data assets reffered to by this agreement item",
+          "type": "array",
+          "items": {
+            "$ref": "../DataGovernance/MetadataAssetRef.schema.json#MetadataAssetRef"
+          }
+        },
+        "termOrCondition": {
+          "type": "array",
+          "items": {
+            "$ref": "../EngagedParty/AgreementTermOrCondition.schema.json#AgreementTermOrCondition"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Entity.schema.json#Entity"
+        }
+      ]
+    }
+  }
+}

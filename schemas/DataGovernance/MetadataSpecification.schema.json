@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "MetadataSpecification.schema.json",
+  "title": "MetadataSpecification",
+  "definitions": {
+    "MetadataSpecification": {
+      "$id": "#MetadataSpecification",
+      "description": "MetadataSpecification is a class that describes the specification of a specific metadata asset",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Description of the specification"
+        },
+        "lastUpdate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time of the last update of the specification"
+        },
+        "lifecycleStatus": {
+          "type": "string",
+          "description": "Used to indicate the current lifecycle status of this catalog item"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name given to the specification"
+        },
+        "validFor": {
+          "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+          "description": "The period for which this REST resource is valid"
+        },
+        "attachment": {
+          "type": "array",
+          "description": "Attachments that may be of relevance to this specification, such as picture, document, media",
+          "items": {
+            "$ref": "../Common/AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
+          }
+        },
+        "targetEntitySchema": {
+          "description": "Pointer to a schema that defines the target entity",
+          "$ref": "../Common/TargetEntitySchema.schema.json#/definitions/TargetEntitySchema"
+        },
+        "specCharacteristic": {
+          "type": "array",
+          "description": "List of characteristics that the entity can take",
+          "items": {
+            "$ref": "../Common/CharacteristicSpecification.schema.json#/definitions/CharacteristicSpecification"
+          }
+        }, 
+        "relatedParty": {
+          "type": "array",
+          "description": "Parties who manage or otherwise have an interest in this specification",
+          "items": {
+            "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+          }
+        },
+        "constraint": {
+					"description": "This is a list of constraint references applied to this specification",
+					"type": "array",
+					"items": {
+						"$ref": "../Common/ConstraintRef.schema.json#/definitions/ConstraintRef"
+					}
+				},
+        "entitySpecRelationship": {
+          "type": "array",
+          "description": "Relationship to another specification",
+          "items": {
+            "$ref": "../Common/EntitySpecificationRelationship.schema.json#/definitions/EntitySpecificationRelationship"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Entity.schema.json#Entity"
+        }
+      ]
+    }
+  }
+}

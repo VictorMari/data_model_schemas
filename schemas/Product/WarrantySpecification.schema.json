@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "WarrantySpecification.schema.json",
+    "title": "WarrantySpecification",
+    "definitions": {
+        "WarrantySpecification": {
+            "$id": "#WarrantySpecification",
+            "type": "object",
+            "properties": {
+                "productSpec": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/ProductSpecificationRef.schema.json#/definitions/ProductSpecificationRef"
+                    }
+                },
+                "resourceSpec": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Resource/ResourceSpecificationRef.schema.json#/definitions/ResourceSpecificationRef"
+                    }
+                },
+                "warrantyAgreementSpecification": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../EngagedParty/AgreementSpecification.schema.json#/definitions/AgreementSpecification"
+                    }
+                },
+                "warrantyDuration": {
+                    "$ref": "../Common/Quantity.schema.json#/definitions/Quantity"
+                },
+                "warrantySpecRelationship": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/WarrantySpecificationRelationship.schema.json#/definitions/WarrantySpecificationRelationship"
+                    }
+                },
+                "warrantySpecification": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../Product/WarrantySpecification.schema.json#/definitions/WarrantySpecification"
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "../Common/EntitySpecification.schema.json#/definitions/EntitySpecification"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ServiceLevelAgreementTemplate.schema.json",
+  "title": "ServiceLevelAgreementTemplate",
+  "definitions": {
+    "ServiceLevelAgreementTemplate": {
+      "$id": "#ServiceLevelAgreementTemplate",
+      "description": "A template document that can be used for an agreement between parties on offered product/service level quality",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "name given to this template"
+        },
+        "document": {
+          "description": "the document attachment that is relevant to this template",
+          "$ref": "../Common/AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
+        }
+      },
+      "allOf": [
+          {
+              "$ref": "../Common/Entity.schema.json#/definitions/Extensible"
+          }
+      ]
+    }
+  }
+}

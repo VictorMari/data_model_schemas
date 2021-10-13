@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ServiceLevelAgreementSpecification.schema.json",
+  "title": "ServiceLevelAgreementSpecification",
+  "definitions": {
+    "ServiceLevelAgreementSpecification": {
+      "$id": "#ServiceLevelAgreementSpecification",
+      "description": "A specification that can be used when instantiating a service level agreement (SLA)",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "A narrative that explains in detail what the agreement specification is about"
+        },
+        "isBundle": {
+          "type": "boolean",
+          "description": "If true, this agreement specification is a grouping of other agreement specifications. The list of bundled agreement specifications is provided by the agreementSpecificationRelationship property"
+        },
+        "lastUpdate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time of the last update"
+        },
+        "lifecycleStatus": {
+          "type": "string",
+          "description": "Indicates the current lifecycle status"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the agreement specification"
+        },
+        "validFor": {
+          "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+          "description": "The period for which the agreement specification is valid"
+        },
+        "version": {
+          "type": "string",
+          "description": "Agreement specification version"
+        },
+        "category": {
+          "description": "The category of product/services that are in scope of this SLA",
+          "$ref": "../Common/EntityRef.schema.json#/definitions/EntityRef"
+        },
+        "specCharacteristic": {
+          "type": "array",
+          "description": "List of characteristics that the SLA can take",
+          "items": {
+            "$ref": "../Common/CharacteristicSpecification.schema.json#/definitions/CharacteristicSpecification"
+          }
+        }, 
+        "template": {
+          "description": "the template document correponding with this SLA specifiction",
+          "$ref": "../EngagedParty/ServiceLevelAgreementTemplate.schema.json#/definitions/ServiceLevelAgreementTemplate"
+        },
+        "itemSpecification": {
+          "type": "array",
+          "description": "Service Level Agreement (SLA) item specification",
+          "items": {
+            "$ref": "../EngagedParty/SLAItemSpecification.schema.json#/definitions/SLAItemSpecification"
+          },
+          "minItems": 1
+        },
+        "relatedParty": {
+          "type": "array",
+          "description": "Parties who manage or otherwise have an interest in this specification",
+          "items": {
+            "$ref": "../EngagedParty/RelatedParty.schema.json#/definitions/RelatedParty"
+          }
+        },
+        "attachment": {
+          "type": "array",
+          "description": "Attachments that may be of relevance to this specification, such as picture, document, media",
+          "items": {
+            "$ref": "../Common/AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue"
+          }
+        },
+        "constraint": {
+					"description": "This is a list of constraint references applied to this specification",
+					"type": "array",
+					"items": {
+						"$ref": "../Common/ConstraintRef.schema.json#/definitions/ConstraintRef"
+					}
+				},
+        "agreementSpecificationRelationship": {
+          "type": "array",
+          "description": "Relationship to another agreement",
+          "items": {
+            "$ref": "../EngagedParty/AgreementSpecificationRelationship.schema.json#AgreementSpecificationRelationship"
+          }
+        },
+        "entitySpecRelationship": {
+          "type": "array",
+          "description": "Relationship to another entity specification",
+          "items": {
+            "$ref": "../Common/EntitySpecificationRelationship.schema.json#/definitions/EntitySpecificationRelationship"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Entity.schema.json#/definitions/Entity"
+        }
+      ]
+    }
+  }
+}
